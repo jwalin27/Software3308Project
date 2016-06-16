@@ -25,44 +25,67 @@
 			<div class="show-on-medium-and-up brand-logo name "> <span class="black-text text-lighten-1">MasK</span></div>
 			
 			<ul class="right ">
-				<li><a class="waves-effect waves-yellow modal-trigger" href="profile.php">Profile</a></li>
-				<li><a class="waves-effect waves-yellow modal-trigger" href="Home.php">Home</a></li>
-				<li><a class="waves-effect waves-yellow modal-trigger" href="#notification-modal">Notification</a></li>
-				
+				<li><a class="waves-effect waves-yellow modal-trigger" href="#login-modal">Log-in</a></li>
+				<li><a class="waves-effect waves-yellow modal-trigger" href="#Signin-modal">Sign-in</a></li>
+			</ul>
 				</div>
-				
-				<div class="center">
-      <div class="card bordered z-depth-2" style="margin:0% auto; max-width:400px;">
-        <div class="card-header">
-           <i class="material-icons medium black-text">perm_identity</i>
-
-        </div>
-        <div class="card-content">
-          <form>
-            <div class="input-field col s12">
-              <input id="username" type="text" class="validate">
-              <label for="username">Username</label>
+		<div  id="login-modal" class="modal blue-grey">
+      <div class="modal-content black-text container">
+    <h4>Send me an Email!</h4>
+        <div class="divider"></div>
+        <!-- Contact Form -->
+        <div class="row">
+        
+       <form class="col s12" action="MAILTO:jwalin27@gmail.com" method="
+          post">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
             </div>
-            <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
-              <label for="password">Password</label>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email" data-error="Invalid Format">Email</label>
+              </div>
             </div>
-            <br>
-              <input type="checkbox" class="filled-in" id="filled-in-box"/>
-              <label for="filled-in-box">Remember me</label>
-              <button type="button" id="mulai_login" name="mulai_login" class="btn blue-grey right waves-effect waves-light white-text">Login</button>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea" class="materialize-textarea" length="120"></textarea>
+                <label for="textarea">Message</label>
+              </div>
+            </div>
+            <button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light modal-action modal-close" >Close
+              <i class="material-icons right">clear</i>
+            </button>
           </form>
         </div>
-        <div class="card-action clearfix">
-          <div class="row">
-            <div class="col s6 text-p">
-              <a href="#" class="orange-text tooltipped" data-position="top" data-delay="50" data-tooltip="Forgot your password?">Forgot your password?</a>
-            </div>
-            <div class="col s6 right-align text-p">
-              <a href="#" class="orange-text tooltipped" data-position="top" data-delay="50" data-tooltip="Register now!">Register now!</a>
-            </div>
-          </div>
-        </div>
+
       </div>
+
+
+      </div>
+
+      </div>
+
     </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+    </script>
+    <!-- END MODAL -->
+    
+				
+				
+
 </html>
