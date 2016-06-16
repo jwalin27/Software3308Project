@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>MasK</title>
-    <link rel="icon" class="responsive-img circle face z-depth-10" href="Pics/sample.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" class="responsive-img circle face z-depth-10" href="Pics/Mask.jpg" type="image/jpg" sizes="32x32">
     
    </head>
    
@@ -22,60 +22,92 @@
       <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper amber darken-1">
-			<div class="show-on-medium-and-up brand-logo name "> <span class="black-text text-lighten-1">MasK</span></div>
+			
+			<div class="show-on-medium-and-up name right"> <span class="white-text flow-text text-lighten-1 center">
+				<h4><br>Man is least himself when he talks in his own person.<br> Give him a <b class= "black-text">mask</b> and he will tell you the truth.</h4>
+			</span></div>
 			
 			<ul class="right ">
-				<li><a class="waves-effect waves-yellow modal-trigger" href="#login-modal">Log-in</a></li>
-				<li><a class="waves-effect waves-yellow modal-trigger" href="#Signin-modal">Sign-in</a></li>
+				<li><a class="waves-effect waves-yellow modal-trigger" href="#signup-modal">Sign up</a></li>
+				<li><a class="waves-effect waves-yellow modal-trigger" href="#login-modal">Log In</a></li>
+				
 			</ul>
+			<div class="left-align" id="me">
+			<img src="Pics/Mask.jpg" id="meFace"alt="me" class="responsive-img circle face z-depth-10"/></div>
 				</div>
-		<div  id="login-modal" class="modal blue-grey">
-      <div class="modal-content black-text container">
-    <h4>Send me an Email!</h4>
-        <div class="divider"></div>
-        <!-- Contact Form -->
+				
+	</nav>
+	</div>
+		<div  id="login-modal" class="modal white" style="margin:0% auto; max-width:650px;">
+      
+		  <br>
+    <h4 class= " center orange-text">Login</h4>
+        
+        <!-- Log-In Form -->
         <div class="row">
         
-       <form class="col s12" action="MAILTO:jwalin27@gmail.com" method="
-          post">
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
-            </div>
+       <form class="col s12" action="profile.php" method="post">
+            
             <div class="row">
               <div class="input-field col s12">
                 <input id="email" type="email" class="validate">
-                <label for="email" data-error="Invalid Format">Email</label>
+                <label for="email" data-error="Invalid Format" class= "black-text">Email</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <textarea id="textarea" class="materialize-textarea" length="120"></textarea>
-                <label for="textarea">Message</label>
+                <input id="password" type="password" class="validate">
+                <label for="password" class= "black-text">Password</label>
               </div>
             </div>
-            <button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
-              <i class="material-icons right">send</i>
-            </button>
-            <button class="btn waves-effect waves-light modal-action modal-close" >Close
-              <i class="material-icons right">clear</i>
-            </button>
+            <style>.checkbox-orange[type="checkbox"].filled-in:checked + label:after{
+					border: 2px solid #ff9800;
+					background-color: #ff9800;
+			}</style>
+            <input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box">
+              <label for="filled-in-box" class = "black-text">Remember me</label>
+              <button type="button" id="mulai_login" name="mulai_login" class="btn orange right waves-effect waves-light white-text">Login</button>
           </form>
         </div>
-
+     
       </div>
-
-
       </div>
-
+    </div>
+    <div  id="signup-modal" class="modal white" style="margin:0% auto; max-width:650px;">
+      
+		  <br>
+    <h4 class= " center orange-text">Join Today</h4>
+        
+        <!-- Sign-up Form -->
+        <div class="row">
+        
+       <form class="col s12" action="profile.php" method="post">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="text" type="text" class="validate">
+                <label for="text" class= "black-text">Full Name</label>
+              </div>
+              
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email" data-error="Invalid Format" class= "black-text">Email</label>
+              </div>
+            
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password" class= "black-text">Password</label>
+              </div>
+            </div>
+            </div>
+            </div>
+              <button type="button" id="mulai_login" name="mulai_login" class="btn orange right waves-effect waves-light white-text">Sign-up!</button>
+          </form>
+        </div>
+ 
       </div>
-
+      </div>
     </div>
     <script type="text/javascript">
     $(document).ready(function(){
@@ -87,5 +119,5 @@
     
 				
 				
-
 </html>
+
