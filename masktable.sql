@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS `Login` (
-`UserID` int(1) NOT NULL auto_increment,
-`User` varchar(6) NOT NULL,
-`Pass` varchar(4) NOT NULL,
+`UserID` int(3) NOT NULL auto_increment,
+`User` varchar(15) NOT NULL,
+`Pass` varchar(16) NOT NULL,
 PRIMARY KEY (`UserID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 INSERT INTO `Login` (`UserID`, `User`, `Pass`) VALUES
@@ -12,9 +12,9 @@ INSERT INTO `Login` (`UserID`, `User`, `Pass`) VALUES
 (5, 'babeRuth49', 'mlbSquared11');
 
 CREATE TABLE IF NOT EXISTS `Posts` (
-`PostID` int(2) NOT NULL auto_increment,
-`UserID` int(1) NOT NULL,
-`Post` varchar(24) NOT NULL,
+`PostID` int(6) NOT NULL auto_increment,
+`UserID` int(3) NOT NULL,
+`Post` varchar(175) NOT NULL,
 PRIMARY KEY (`PostID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 INSERT INTO `Posts` (`PostID`, `UserID`, `Post`) VALUES
@@ -26,8 +26,8 @@ INSERT INTO `Posts` (`PostID`, `UserID`, `Post`) VALUES
 
 CREATE TABLE IF NOT EXISTS `Followers` (
 `Key` int(3) NOT NULL auto_increment,
-`UserID` int(2) NOT NULL,
-`Follower` int(6) NOT NULL,
+`UserID` int(3) NOT NULL,
+`Follower` int(3) NOT NULL,
 PRIMARY KEY (`Key`)) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT = 1 ;
 INSERT INTO `Followers` (`Key`, `UserID`, `Follower`) VALUES
 (1, 1, 4),
@@ -39,3 +39,15 @@ INSERT INTO `Followers` (`Key`, `UserID`, `Follower`) VALUES
 (7, 3, 4),
 (8, 4, 3),
 (9, 2, 5) ;
+
+CREATE TABLE IF NOT EXISTS `Profile` (
+`UserID` int(3) NOT NULL auto_increment,
+`Bio` varchar(40) NOT NULL,
+`Pic` varbinary(3000),
+PRIMARY KEY (`UserID`)) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT = 1 ;
+INSERT INTO `Profile` (`UserID`, `Bio`, `Pic`) VALUES
+(1, 'The Best...', NULL),
+(2, 'Born and Raised in...', 'http://a4.files.biography.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTIwNjA4NjMzODg2NTc0MDky.jpg'),
+(3, 'Just a humble...', 'https://mcdonalds.com.au/sites/mcdonalds.com.au/files/hero_pdt_mustard.png'),
+(4, 'When I was born...', NULL),
+(5, 'One of the best...', NULL) ;
