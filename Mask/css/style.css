@@ -11,9 +11,10 @@
 }
 
 .face{
-  margin-top: 0em;
+  margin-top: 0.60em;
+  margin-left: 1.0em;
   text-align: center;
-  width: 50%;
+  width: 8%;
 }
 
 .headerName{
@@ -35,9 +36,9 @@
 }
 .name{
   font-weight: 75;
-  font-size: 2em;
+  font-size: 1.5em;
   position: absolute;
-  right: 33em; 
+  left: 20%; 
 }
 .t{
 font-weight: 100;
