@@ -15,7 +15,7 @@
     
    </head>
    
-   <body  background="orange lighten-4">
+    <body  background="orange lighten-4">
 	        <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.js"></script>
@@ -31,7 +31,7 @@
 			
 			<ul class="right ">
 				<li><a class="waves-effect waves-yellow modal-trigger" href="Homepage.html">Home</a></li>
-				<li><a href="#notification-modal" class="waves-effect waves-block waves-light"><i class="mdi-social-notifications"></i></a></li>  
+				<li><a href="#notification-modal" class="waves-effect waves-block waves-light">Notification</a></li>  
 				<li><a class="waves-effect waves-yellow modal-trigger" href="Home.html">Sign-out</a></li>
 			</ul>
 			<div class="left-align" id="me">
@@ -39,40 +39,64 @@
 				</div>
 	</nav>
 	</div>
-	
+<div class="row">
+      <div class="col l3 m5 grey lighten-2 sideBar z-depth-2 hide-on-small-only">
+        <div>
+            <div class="nameBox left-align">
+				<h5 class="black-text"> Name</h5>
+
+            </div>
+             <div class="center-align" id="me">
+             <img src="Pics/Mask.jpg" id="meFace"alt="me" class="responsive-img circle face z-depth-10"/>
+             <h4>Profile</h4>
+			
+           </div>
+           <div class= "left-align">
+			   <br>
+			  
+           <i class="Medium material-icons black-text"></i>
+           <h5><span class="black-text text-accent-2">Name:-</span></h5>  
+            <input id="name" type="text" class="validate">
+           <h5><span class="black-text text-accent-2">Email:-</span></h5>  
+            <input id="email" type="email" class="validate">
+            <h5><span class="black-text text-accent-2">Birthday:-</span></h5>  
+            <input id="birthdate" type="date" class="validate">
+           </div>
+           <div class = "center-align">
+		
+           
+           
+           </div>
+
+        </div>
+      </div>
+			   
+			   
+			   
 	<!---Profile-->
-	<!-- profile-page-wall -->
-	
-
-        <div class="col l m6 s0 right">
-
-        <div class="parallax-container">
-			
-			</div>
-			
-			   <div class="section z-depth-2  lighten-1">
-          <div class="container  lighten-1">
-              
-                    <ul class="tabs tab-profile z-depth-1amber">
-                      <li class="tab col s3"><a class="orange-text waves-effect waves-light active" href="#UpdateStatus"><i class="mdi-editor-border-color"></i> Update Status</a>
+	  <div class="col l9 m7 s0 right">
+          
+        <div class="section z-depth-2  lighten-1">
+          <div class="container1 lighten-1">
+			  <ul class="tabs tab-profile z-depth-1  orange">
+                      <li class="tab col s3"><a class="black-text waves-effect waves-light active" href="#UpdateStatus"> Update Status</a>
                       </li>
-                      <li class="tab col s3"><a class="ornage-text waves-effect waves-light" href="#AddPhotos"><i class="mdi-image-camera-alt"></i> Add Photos</a>
+                      <li class="tab col s3"><a class="black-text waves-effect waves-light" href="#AddPhotos"> Add Photos</a>
                       </li>
-                      <li class="tab col s3"><a class="ornage-text waves-effect waves-light" href="#CreateAlbum"><i class="mdi-image-photo-album"></i> Create Album</a>
+                      <li class="tab col s3"><a class="black-text waves-effect waves-light" href="#AddVideo"> Add Video</a>
                       </li>                      
                     </ul>
-                    <!-- UpdateStatus-->
-                    <div id="UpdateStatus" class="tab-content col s12  ">
+                     <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
                       <div class="row">
                         <div class="col s2">
-                          <img src="Pics/Mask.jpg" alt="" class="circle responsive-img valign profile-image-post">
+                          <img src="Pics/Mask.jpg" alt="" class="circle responsive-img center face1">
                         </div>
                         <div class="input-field col s10">
                           <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
                           <label for="textarea" class="">What's on your mind?</label>
                         </div>
                       </div>
-                      <div class="row">
+                     <div class="row">
                         <div class="col s12 m6 share-icons">
                           <a href="#"><i class="mdi-image-camera-alt"></i></a>
                           <a href="#"><i class="mdi-action-account-circle"></i></a>
@@ -81,24 +105,16 @@
                         </div>
                         <div class="col s12 m6 right-align">
                            <!-- Dropdown Trigger -->
-                            <a class='dropdown-button btn' href='#' data-activates='profliePost'><i class="mdi-action-language"></i> Public</a>
-
-                            <!-- Dropdown Structure -->
-                            <ul id='profliePost' class='dropdown-content'>
-                              <li><a href="#!"><i class="mdi-action-language"></i> Public</a></li>
-                              <li><a href="#!"><i class="mdi-action-face-unlock"></i> Friends</a></li>                              
-                              <li><a href="#!"><i class="mdi-action-lock-outline"></i> Only Me</a></li>
-                            </ul>
-
-                            <a class="waves-effect waves-light btn"><i class="mdi-maps-rate-review left"></i>Post</a>
+                            <a class="waves-effect waves-light btn orange right-align">Post</a>
                         </div>
                       </div>
-                    </div>
-                    <!-- AddPhotos -->
-                    <div id="AddPhotos" class="tab-content col s12 ">
+                      </div>
+                    
+			   <!-- AddPhotos -->
+                    <div id="AddPhotos" class="tab-content col s12 grey lighten-4 ">
                       <div class="row">
                         <div class="col s2">
-                          <img src="Pics/Mask.jpg" alt="" class="circle responsive-img valign profile-image-post">
+                          <img src="Pics/Mask.jpg" alt="" class="circle responsive-img face1">
                         </div>
                         <div class="input-field col s10">
                           <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
@@ -114,47 +130,23 @@
                         </div>
                         <div class="col s12 m6 right-align">
                            <!-- Dropdown Trigger -->
-                            <a class='dropdown-button btn' href='#' data-activates='profliePost2'><i class="mdi-action-language"></i> Public</a>
+                          
 
-                            <!-- Dropdown Structure -->
-                            <ul id='profliePost2' class='dropdown-content'>
-                              <li><a href="#!"><i class="mdi-action-language"></i> Public</a></li>
-                              <li><a href="#!"><i class="mdi-action-face-unlock"></i> Friends</a></li>                              
-                              <li><a href="#!"><i class="mdi-action-lock-outline"></i> Only Me</a></li>
-                            </ul>
-
-                            <a class="waves-effect waves-light btn"><i class="mdi-maps-rate-review left"></i>
-                             Upload
-                            <?php
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
-}
-?>
-                            </a>
+                            <a class="waves-effect waves-light btn orange  right-align">Upload</a>
                         </div>
                       </div>
                     </div>
-                    <!-- CreateAlbum -->
-                    <div id="CreateAlbum" class="tab-content col s12  grey lighten-4">
+                   
+                    
+                   <!-- AddVideos -->
+                    <div id="AddVideo" class="tab-content col s12 grey lighten-4 ">
                       <div class="row">
                         <div class="col s2">
-                          <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image-post">
+                          <img src="Pics/Mask.jpg" alt="" class="circle responsive-img face1">
                         </div>
                         <div class="input-field col s10">
                           <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
-                          <label for="textarea" class="">Create awesome album.</label>
+                          <label for="textarea" class="">Share your favorites videos!</label>
                         </div>
                       </div>
                       <div class="row">
@@ -165,22 +157,16 @@ if(isset($_POST["submit"])) {
                           <a href="#"><i class="mdi-communication-location-on"></i></a>
                         </div>
                         <div class="col s12 m6 right-align">
-                           <!-- Dropdown Trigger -->
-                            <a class='dropdown-button btn' href='#' data-activates='profliePost3'><i class="mdi-action-language"></i> Public</a>
+                         
 
-                            <!-- Dropdown Structure -->
-                            <ul id='profliePost3' class='dropdown-content'>
-                              <li><a href="#!"><i class="mdi-action-language"></i> Public</a></li>
-                              <li><a href="#!"><i class="mdi-action-face-unlock"></i> Friends</a></li>                              
-                              <li><a href="#!"><i class="mdi-action-lock-outline"></i> Only Me</a></li>
-                            </ul>
-
-                            <a class="waves-effect waves-light btn"><i class="mdi-maps-rate-review left"></i>Post</a>
+                            <a class="waves-effect waves-light btn orange"><i class="mdi-maps-rate-review left"></i>Upload</a>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                    </div>
+			  </div>
+			  </div>
+					</div>
                 <script type="text/javascript">
     $(document).ready(function(){
       $('.parallax').parallax();
