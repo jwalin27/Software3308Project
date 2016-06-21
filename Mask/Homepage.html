@@ -23,6 +23,7 @@
       <nav>
         <div class="nav-wrapper amber darken-1">
 			
+						
 			<div class="show-on-medium-and-up name right"> <span class="white-text flow-text text-lighten-1 center">
 				<h4><br> <b class= "black-text">Mask</b>
 				<br> Welcome :- <?php echo $First_name; echo " "; echo $Last_name; ?> </h4>
@@ -30,7 +31,8 @@
 			
 			<ul class="right ">
 				<li><a class="waves-effect waves-yellow modal-trigger" href="Homepage.html">Home</a></li>
-				<li><a class="waves-effect waves-yellow modal-trigger" href="#signup-modal">Profile</a></li>
+				<li><a href="#notification-modal" class="waves-effect waves-block waves-light">Notification</a></li> 
+				<li><a class="waves-effect waves-yellow modal-trigger" href="profile.html">Profile</a></li>
 				<li><a class="waves-effect waves-yellow modal-trigger" href="#signup-modal">About</a></li>
 				<li><a class="waves-effect waves-yellow modal-trigger" href="Home.html">Sign out</a></li>
 				
@@ -41,3 +43,121 @@
 				
 	</nav>
 	</div>
+	<div class="row">
+      <div class="col l3 m5 grey lighten-2 sideBar z-depth-2 hide-on-small-only">
+        <div>
+            
+		
+           
+           
+           </div>
+
+        </div>
+    
+			   
+			   
+			   
+	<!---Profile-->
+	  <div class="col l9 m7 s0 right">
+          
+        <div class="section z-depth-2  lighten-1">
+          <div class="container1 lighten-1">
+			  <ul class="tabs tab-profile z-depth-1  orange">
+                      <li class="tab col s3"><a class="black-text waves-effect waves-light active" href="#UpdateStatus"> Update Status</a>
+                      </li>
+                      <li class="tab col s3"><a class="black-text waves-effect waves-light" href="#AddPhotos"> Add Photos</a>
+                      </li>
+                      <li class="tab col s3"><a class="black-text waves-effect waves-light" href="#AddVideo"> Add Video</a>
+                      </li>                      
+                    </ul>
+                     <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
+                      <div class="row">
+                        <div class="col s2">
+                          <img src="Pics/Mask.jpg" alt="" class="circle responsive-img center face1">
+                        </div>
+                        <div class="input-field col s10">
+                          <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+                          <label for="textarea" class="">What's on your mind?</label>
+                        </div>
+                      </div>
+                     <div class="row">
+                        <div class="col s12 m6 share-icons">
+                          <a href="#"><i class="mdi-image-camera-alt"></i></a>
+                          <a href="#"><i class="mdi-action-account-circle"></i></a>
+                          <a href="#"><i class="mdi-hardware-keyboard-alt"></i></a>
+                          <a href="#"><i class="mdi-communication-location-on"></i></a>
+                        </div>
+                        <div class="col s12 m6 right-align">
+                           <!-- Dropdown Trigger -->
+                            <a class="waves-effect waves-light btn orange right-align">Post</a>
+                        </div>
+                      </div>
+                      </div>
+                    
+			   <!-- AddPhotos -->
+                    <div id="AddPhotos" class="tab-content col s12 grey lighten-4 ">
+                      <div class="row">
+                        <div class="col s2">
+                          <img src="Pics/Mask.jpg" alt="" class="circle responsive-img face1">
+                        </div>
+                        <div class="input-field col s10">
+                          <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+                          <label for="textarea" class="">Share your favorites photos!</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12 m6 share-icons">
+                          <a href="#"><i class="mdi-image-camera-alt"></i></a>
+                          <a href="#"><i class="mdi-action-account-circle"></i></a>
+                          <a href="#"><i class="mdi-hardware-keyboard-alt"></i></a>
+                          <a href="#"><i class="mdi-communication-location-on"></i></a>
+                        </div>
+                        <div class="col s12 m6 right-align">
+                           <!-- Dropdown Trigger -->
+                          
+
+                            <a class="waves-effect waves-light btn orange  right-align">Upload</a>
+                        </div>
+                      </div>
+                    </div>
+                   
+                    
+                   <!-- AddVideos -->
+                    <div id="AddVideo" class="tab-content col s12 grey lighten-4 ">
+                      <div class="row">
+                        <div class="col s2">
+                          <img src="Pics/Mask.jpg" alt="" class="circle responsive-img face1">
+                        </div>
+                        <div class="input-field col s10">
+                          <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+                          <label for="textarea" class="">Share your favorites videos!</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12 m6 share-icons">
+                          <a href="#"><i class="mdi-image-camera-alt"></i></a>
+                          <a href="#"><i class="mdi-action-account-circle"></i></a>
+                          <a href="#"><i class="mdi-hardware-keyboard-alt"></i></a>
+                          <a href="#"><i class="mdi-communication-location-on"></i></a>
+                        </div>
+                        <div class="col s12 m6 right-align">
+                         
+
+                            <a class="waves-effect waves-light btn orange"><i class="mdi-maps-rate-review left"></i>Upload</a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+			  </div>
+			  </div>
+					</div>
+                <script type="text/javascript">
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+    </script>
+
+
+
+</html>
+
