@@ -38,7 +38,7 @@
 				
 	</nav>
 	</div>
-		<div  id="login-modal" class="modal white" style="margin:0% auto; max-width:650px;">
+		<div  id="login-modal" class="modal white" style="margin:0% auto; max-width:600px;" <!--login width and setting --s>
       
 		  <br>
     <h4 class= " center orange-text">Login</h4>
@@ -46,17 +46,17 @@
         <!-- Log-In Form -->
         <div class="row">
         
-       <form class="col s12" action="profile.php" method="post">
+       <form class="col s12" action="login.php" method="post">
             
             <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email" data-error="Invalid Format" class= "black-text">Email</label>
+             <div class="input-field col s12">
+                <input id="user" name ="user" type = "text" class="validate">
+                <label for="user" data-error="Invalid Format" class= "black-text">User</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
+                <input id="pass" name="pass" type="password" class="validate">
                 <label for="password" class= "black-text">Password</label>
               </div>
             </div>
@@ -66,7 +66,7 @@
 			}</style>
             <input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box">
               <label for="filled-in-box" class = "black-text">Remember me</label>
-              <button type="button" id="mulai_login" name="mulai_login" class="btn orange right waves-effect waves-light white-text">Login</button>
+              <button type="submit" name="submit" class="btn orange right waves-effect waves-light white-text">Login</button>
           </form>
         </div>
      
@@ -81,28 +81,23 @@
         <!-- Sign-up Form -->
         <div class="row">
         
-       <form class="col s12" action="profile.php" method="post">
+       <form class="col s12" action="signup.php" method="post">
+             
             <div class="row">
               <div class="input-field col s12">
-                <input id="text" type="text" class="validate">
-                <label for="text" class= "black-text">Full Name</label>
-              </div>
-              
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email" data-error="Invalid Format" class= "black-text">Email</label>
+                <input id="user" type="text" name="user" class="validate">
+                <label for="user" data-error="Invalid Format" class= "black-text">Username</label>
               </div>
             
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password" class= "black-text">Password</label>
+                <input id="pass" type="text" name="pass" class="validate">
+                <label for="pass" class= "black-text">Password</label>
               </div>
             </div>
             </div>
             </div>
-              <button type="button" id="mulai_login" name="mulai_login" class="btn orange right waves-effect waves-light white-text">Sign-up!</button>
+              <button type="submit" name="submit" class="btn orange right waves-effect waves-light white-text">Sign Up!</button>
           </form>
         </div>
  
