@@ -1,11 +1,11 @@
 <?php
 session_start();
+$con = mysql_connect("localhost","root","root","masK");
 ?>
 <!DOCTYPE html>
 <html>
 <body>
 <?php
-$con = mysql_connect("localhost","root","root","masK");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());

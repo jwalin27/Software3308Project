@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$con = mysql_connect("localhost","root","root","masK");
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,15 +18,14 @@
     <link rel="icon" class="responsive-img circle face z-depth-10" href="Pics/Mask.jpg" type="image/jpg" sizes="32x32">
     
    </head>
-<body>
-  <!-- <body  background="orange lighten-4">
+ <body  background="orange lighten-4">
                 <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.js"></script>
       <script type="text/javascript" src="js/script.js"></script>
- <!--     <div class="navbar-fixed">
+     <div class="navbar-fixed">
       <nav>
-        <!--<div class="nav-wrapper amber darken-1">
+        <div class="nav-wrapper amber darken-1">
 
 
                         <div class="show-on-medium-and-up name right"> <span class="white-text flow-text text-lighten-1 center">
@@ -36,7 +36,6 @@
                         <ul class="right ">
                                 <li><a class="waves-effect waves-yellow modal-trigger" href="feed.php">Home</a></li>  
                                 <li><a class="waves-effect waves-yellow modal-trigger" href="profile.php">Profile</a></li>
-                                <li><a class="waves-effect waves-yellow modal-trigger" href="#signup-modal">About</a></li>
                                 <li><a class="waves-effect waves-yellow modal-trigger" href="Home.html">Sign out</a></li>
 
                         </ul>
@@ -46,7 +45,7 @@
      </nav>
         </div>
         <div class="row">
-      <div class="col l3 m5 grey lighten-2 sideBar z-depth-2 hide-on-small-only">
+   <!--   <div class="col l3 m5 grey lighten-2 sideBar z-depth-2 hide-on-small-only"-->
         <div>
 
 
@@ -56,11 +55,13 @@
 
         </div>
 
+<br>
+<br>
+<br>
 
 
-
-        <!---Profile
-          <div class="col l9 m7 s0 right">
+        <!---Profile -->
+          <div class="col l9 m7 s0 center">
 
         <div class="section z-depth-2  lighten-1">
           <div class="container1 lighten-1">
@@ -77,9 +78,11 @@
                         <div class="col s2">
                           <img src="Pics/Mask.jpg" alt="" class="circle responsive-img center face1">
                         </div>
-                        <div class="input-field col s10">
-                          <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+                       <div class="input-field col s10">
+							<form action="status.php" id="status" method="post">
+                          <textarea name="post" id="textarea" row="2" class="materialize-textarea"></textarea>
                           <label for="textarea" class="">What's on your mind?</label>
+							
                         </div>
                       </div>
                      <div class="row">
@@ -90,13 +93,14 @@
                           <a href="#"><i class="mdi-communication-location-on"></i></a>
                         </div>
                         <div class="col s12 m6 right-align">
-                           <!-- Dropdown Trigger --
-                            <a class="waves-effect waves-light btn orange right-align">Post</a>
+                           <!-- Dropdown Trigger -->
+                            <button type="submit" name="submit" class="btn orange right waves-effect waves-light white-text">Post</button>
+                            </form>
                         </div>
                       </div>
                       </div>
 
-                           <!-- AddPhotos --
+                           <!-- AddPhotos -->
                     <div id="AddPhotos" class="tab-content col s12 grey lighten-4 ">
                       <div class="row">
                         <div class="col s2">
@@ -104,7 +108,7 @@
                         </div>
                         <div class="input-field col s10">
                           <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
-                          <label for="textarea" class="">Share your favorites photos!</label>
+                          <label for="textarea" class="">Share your favorite photos!</label>
                         </div>
                       </div>
                       <div class="row">
@@ -114,20 +118,20 @@
                           <a href="#"><i class="mdi-hardware-keyboard-alt"></i></a>
                           <a href="#"><i class="mdi-communication-location-on"></i></a>
                         </div>
-                        <div class="col s12 m6 right-align">
+                        <div class="col s12 m6 left-align">
 			</div>
 
 
-                           <!-- Dropdown Trigger --
+                           <!-- Dropdown Trigger -->
                           
 
-                            <a class="waves-effect waves-light btn orange  right-align">Upload</a>
+                            <a class="waves-effect waves-light btn orange  left-align">Upload</a>
                         </div>
                       </div>
                     </div>
                    
                     
-                   <!-- AddVideos --
+                   <!-- AddVideos -->
                     <div id="AddVideo" class="tab-content col s12 grey lighten-4 ">
                       <div class="row">
                         <div class="col s2">
@@ -135,7 +139,7 @@
                         </div>
                         <div class="input-field col s10">
                           <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
-                          <label for="textarea" class="">Share your favorites videos!</label>
+                          <label for="textarea" class="">Share your favorite videos!</label>
                         </div>
                       </div>
                       <div class="row">
@@ -145,7 +149,7 @@
                           <a href="#"><i class="mdi-hardware-keyboard-alt"></i></a>
                           <a href="#"><i class="mdi-communication-location-on"></i></a>
                         </div>
-                        <div class="col s12 m6 right-align">
+                        <div class="col s12 m6 center-align">
                          
 
                             <a class="waves-effect waves-light btn orange"><i class="mdi-maps-rate-review left"></i>Upload</a>
@@ -162,10 +166,55 @@
     });
     </script>
     
--->
+    
+            <style>
+		.dotbox{
+	background-color: grey lighten-3;
+    width: 550px;
+    padding: 10px;
+    border: 5px solid orange;
+    margin: 25px;
+    position: absolute;
+ <!--   margin-top: 15.0ex;-->
+  <!--  margin-left: 50.0ex; -->
+}
+	.dotbox1{
+	background-color: grey lighten-3;
+    width: 550px;
+    padding: 10px;
+    border: 5px solid orange;
+    margin: 25px;
+    position: absolute;
+    margin-top: 40.0ex;
+    margin-left: 10.0ex;
+}
+	.dotbox2{
+	background-color: grey lighten-3;
+    width: 550px;
+    padding: 10px;
+    border: 5px solid orange;
+    margin: 25px;
+    position: absolute;
+    margin-top: 60.5ex;
+    margin-left: 10.0ex;
+}
+
+	div.img {
+    margin: 5px;
+    padding: 15px;
+    border: 5px solid orange;
+    float: left;
+    width: 650px;
+    margin-top: 15.0ex;
+    margin-left: 87.5ex;
+}
+      
+    </style>
+    
+    
+    
 <?php
 //posts table with posts
-$con = mysql_connect("localhost","root","root","masK");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
@@ -173,11 +222,14 @@ if (!$con)
 mysql_query("USE masK");
 $sql="SELECT Login.User, Posts.Post FROM Login INNER JOIN Posts ON Posts.UserID=Login.UserID ORDER BY Posts.PostID;";
 $result = mysql_query($sql);
+echo "<div class=\"dotbox\">";
 echo "<table border='1'>";
 echo "<tr>";
 echo "<th>Username</th>";
 echo "<th>Post</th>";
 echo "</tr>";
+echo "</div>";
+			if ($result){
 while($row = mysql_fetch_row($result))
 {
 	echo "<tr>";
@@ -186,9 +238,8 @@ while($row = mysql_fetch_row($result))
         echo "<td>$cell</td>";
 
     echo "</tr>\n";
-}
+}}
 mysql_close($con);
 ?>
 
--->
 </html>
