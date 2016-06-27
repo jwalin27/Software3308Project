@@ -17,15 +17,15 @@
     <link rel="icon" class="responsive-img circle face z-depth-10" href="Pics/Mask.jpg" type="image/jpg" sizes="32x32">
     
    </head>
-
-   <body  background="orange lighten-4">
+<body>
+  <!-- <body  background="orange lighten-4">
                 <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.js"></script>
       <script type="text/javascript" src="js/script.js"></script>
-      <div class="navbar-fixed">
+ <!--     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper amber darken-1">
+        <!--<div class="nav-wrapper amber darken-1">
 
 
                         <div class="show-on-medium-and-up name right"> <span class="white-text flow-text text-lighten-1 center">
@@ -36,6 +36,7 @@
                         <ul class="right ">
                                 <li><a class="waves-effect waves-yellow modal-trigger" href="feed.php">Home</a></li>  
                                 <li><a class="waves-effect waves-yellow modal-trigger" href="profile.php">Profile</a></li>
+                                <li><a class="waves-effect waves-yellow modal-trigger" href="#signup-modal">About</a></li>
                                 <li><a class="waves-effect waves-yellow modal-trigger" href="Home.html">Sign out</a></li>
 
                         </ul>
@@ -58,7 +59,7 @@
 
 
 
-        <!---Profile-->
+        <!---Profile
           <div class="col l9 m7 s0 right">
 
         <div class="section z-depth-2  lighten-1">
@@ -77,8 +78,7 @@
                           <img src="Pics/Mask.jpg" alt="" class="circle responsive-img center face1">
                         </div>
                         <div class="input-field col s10">
-                          <form action="status.php" id="status" method="post">
-                          <textarea name="post" id="textarea" row="2" class="materialize-textarea"></textarea>
+                          <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
                           <label for="textarea" class="">What's on your mind?</label>
                         </div>
                       </div>
@@ -90,13 +90,13 @@
                           <a href="#"><i class="mdi-communication-location-on"></i></a>
                         </div>
                         <div class="col s12 m6 right-align">
-                           <!-- Dropdown Trigger -->
-                            <button type="submit" name="submit" class="btn orange right waves-effect waves-light white-text">Post</button>
+                           <!-- Dropdown Trigger --
+                            <a class="waves-effect waves-light btn orange right-align">Post</a>
                         </div>
                       </div>
                       </div>
 
-                           <!-- AddPhotos -->
+                           <!-- AddPhotos --
                     <div id="AddPhotos" class="tab-content col s12 grey lighten-4 ">
                       <div class="row">
                         <div class="col s2">
@@ -118,7 +118,7 @@
 			</div>
 
 
-                           <!-- Dropdown Trigger -->
+                           <!-- Dropdown Trigger --
                           
 
                             <a class="waves-effect waves-light btn orange  right-align">Upload</a>
@@ -127,7 +127,7 @@
                     </div>
                    
                     
-                   <!-- AddVideos -->
+                   <!-- AddVideos --
                     <div id="AddVideo" class="tab-content col s12 grey lighten-4 ">
                       <div class="row">
                         <div class="col s2">
@@ -161,7 +161,34 @@
       $('.parallax').parallax();
     });
     </script>
+    
+-->
+<?php
+//posts table with posts
+$con = mysql_connect("localhost","root","root","masK");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+mysql_query("USE masK");
+$sql="SELECT Login.User, Posts.Post FROM Login INNER JOIN Posts ON Posts.UserID=Login.UserID ORDER BY Posts.PostID;";
+$result = mysql_query($sql);
+echo "<table border='1'>";
+echo "<tr>";
+echo "<th>Username</th>";
+echo "<th>Post</th>";
+echo "</tr>";
+while($row = mysql_fetch_row($result))
+{
+	echo "<tr>";
+	
+	foreach($row as $cell)
+        echo "<td>$cell</td>";
 
+    echo "</tr>\n";
+}
+mysql_close($con);
+?>
 
-
+-->
 </html>
