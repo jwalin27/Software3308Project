@@ -16,7 +16,12 @@
   text-align: center;
   width: 8%;
 }
-
+.face1{
+  margin-top: 1.0em;
+  margin-left: 5.0em;
+  text-align: center;
+  width: 50%;
+}
 .headerName{
   margin-left: 2em;
   font-size: 1.5em;
