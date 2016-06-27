@@ -1,4 +1,11 @@
-Organization of files:
+Welcome to Mask! The first truly anonymous social network. Mask is a website where users can share their thoughts, opinions, or ideas, completely behind the mask of anonymity. After creating a username, users have no further ability to add information about themselves, ensuring that their identity will remain a complete secret.
+
+What will you say from behind your Mask?
+
+
+
+
+Organization of repo:
 All HTML and PHP files required to run are located in the 'Mask' folder
 Assets of this code are stored in nested folders within 'Mask'
 These assets are sorted into a 'css' folder, a 'js' folder (javascript), and two separate 'fonts' folders.
