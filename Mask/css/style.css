@@ -16,7 +16,12 @@
   text-align: center;
   width: 8%;
 }
-
+.face1{
+  margin-top: 1.0em;
+  margin-left: 5.0em;
+  text-align: center;
+  width: 50%;
+}
 .headerName{
   margin-left: 2em;
   font-size: 1.5em;
@@ -77,4 +82,11 @@ a:hover{
     z-index: 10;
     height: 3em;
     margin-top: -3em;
+}
+.container1 {
+  position: absolute;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: auto;
+  margin-top: 80px;
 }

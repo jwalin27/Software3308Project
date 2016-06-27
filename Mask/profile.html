@@ -25,13 +25,14 @@
         <div class="nav-wrapper amber darken-1">
 			
 			<div class="show-on-medium-and-up name right"> <span class="white-text flow-text text-lighten-1 center">
-				<h4><br> <b class= "black-text">Mask</b> 
-				<br> Welcome :- </h4>
+				<h4><br> <b class= "black-text">MasK</b> 
+				<br> Hello, ________! </h4>
 			</span></div>
 			
 			<ul class="right ">
-				<li><a class="waves-effect waves-yellow modal-trigger" href="Homepage.html">Home</a></li>  
-				<li><a class="waves-effect waves-yellow modal-trigger" href="Home.html">Sign-out</a></li>
+				<li><a class="waves-effect waves-yellow modal-trigger" href="Homepage.html"><i class="small material-icons amber darken-1">store</i></a></li>
+				<li><a class="waves-effect waves-yellow modal-trigger" href="profile.html"><i class="small material-icons amber darken-1">assignment_ind</i></a></li>
+				<li><a class="waves-effect waves-yellow modal-trigger" href="Home.html"><i class="small material-icons amber darken-1">power_settings_new</i></a></li>
 			</ul>
 			<div class="left-align" id="me">
 			<a href ="HomePage.html"><img src="Pics/Mask.jpg" id="meFace"alt="me" class="responsive-img circle face z-depth-10"/></div></a>
@@ -39,31 +40,27 @@
 	</nav>
 	</div>
 <div class="row">
-            <div class="col l3 m5 grey lighten-2 sideBar z-depth-2 hide-on-small-only">
+      <div class="col l3 m5 grey lighten-2 sideBar z-depth-2 hide-on-small-only">
+        <div>
             <div class="nameBox left-align">
-                                <h5 class="black-text"></h5>
+				<h5 class="black-text"> Name</h5>
 
             </div>
              <div class="center-align" id="me">
              <img src="Pics/Mask.jpg" id="meFace"alt="me" class="responsive-img circle face z-depth-10"/>
              <h4>Notifications</h4>
-
+			
            </div>
            <div class= "left-align">
                            <br>
 
            <h6><span class="black-text text-accent-2">Your most recent post now has   <?php echo $likes?> 4  likes.</span></h6>
-           <h6><span class="black-text text-accent-2">You have   <?php echo $followers> 12  followers.</span></h6>
+           <h6><span class="black-text text-accent-2">You have   <?php echo $followers> 12  followers. ?></span></h6>
 
          </div>
-           <div class = "center-align">
-
-
-
-           </div>
-
-        </div>
-		
+           <div class= "left-align">
+			   <br>
+			
            
            
            </div>
@@ -79,11 +76,11 @@
         <div class="section z-depth-2  lighten-1">
           <div class="container1 lighten-1">
 			  <ul class="tabs tab-profile z-depth-1  orange">
-                      <li class="tab col s3"><a class="black-text waves-effect waves-light active" href="#UpdateStatus"> Update Status</a>
+                      <li class="tab col s3"><a class="black-text waves-effect waves-light active" href="#UpdateStatus"><i class="small material-icons orange">mode_edit</i></a>
                       </li>
-                      <li class="tab col s3"><a class="black-text waves-effect waves-light" href="#AddPhotos"> Add Photos</a>
+                      <li class="tab col s3"><a class="black-text waves-effect waves-light" href="#AddPhotos"><i class="small material-icons orange">perm_media</i></a>
                       </li>
-                      <li class="tab col s3"><a class="black-text waves-effect waves-light" href="#AddVideo"> Add Video</a>
+                      <li class="tab col s3"><a class="black-text waves-effect waves-light" href="#AddVideo"><i class="small material-icons orange">videocam</i></a>
                       </li>                      
                     </ul>
                      <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
@@ -93,7 +90,7 @@
                         </div>
                         <div class="input-field col s10">
                           <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
-                          <label for="textarea" class="">What's on your mind?</label>
+                          <label for="textarea" class="black-text">What's on your mind?</label>
                         </div>
                       </div>
                      <div class="row">
@@ -118,7 +115,7 @@
                         </div>
                         <div class="input-field col s10">
                           <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
-                          <label for="textarea" class="">Share your favorites photos!</label>
+                          <label for="textarea" class="black-text">Share your favorites photos!</label>
                         </div>
                       </div>
                       <div class="row">
@@ -146,7 +143,7 @@
                         </div>
                         <div class="input-field col s10">
                           <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
-                          <label for="textarea" class="">Share your favorites videos!</label>
+                          <label for="textarea" class="black-text">Share your favorites videos!</label>
                         </div>
                       </div>
                       <div class="row">
