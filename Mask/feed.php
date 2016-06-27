@@ -36,7 +36,6 @@
                         <ul class="right ">
                                 <li><a class="waves-effect waves-yellow modal-trigger" href="feed.php">Home</a></li>  
                                 <li><a class="waves-effect waves-yellow modal-trigger" href="profile.php">Profile</a></li>
-                                <li><a class="waves-effect waves-yellow modal-trigger" href="#signup-modal">About</a></li>
                                 <li><a class="waves-effect waves-yellow modal-trigger" href="Home.html">Sign out</a></li>
 
                         </ul>
@@ -78,7 +77,8 @@
                           <img src="Pics/Mask.jpg" alt="" class="circle responsive-img center face1">
                         </div>
                         <div class="input-field col s10">
-                          <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+                          <form action="status.php" id="status" method="post">
+                          <textarea name="post" id="textarea" row="2" class="materialize-textarea"></textarea>
                           <label for="textarea" class="">What's on your mind?</label>
                         </div>
                       </div>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="col s12 m6 right-align">
                            <!-- Dropdown Trigger -->
-                            <a class="waves-effect waves-light btn orange right-align">Post</a>
+                            <button type="submit" name="submit" class="btn orange right waves-effect waves-light white-text">Post</button>
                         </div>
                       </div>
                       </div>
